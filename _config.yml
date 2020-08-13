@@ -35,7 +35,7 @@ typewrite-text: Getting ready to build a robot called SPARKI
 author_work_experiences:
             - company_name: Peraton
               company_logo: Peraton-logo-color.jpg
-              company_url: https://peraton.com
+              company_url: https://www.peraton.com
               designation: Software Engineer
               description: Worked on various Java projects
               visibility: true
@@ -49,7 +49,7 @@ author_work_experiences:
 author_education_details:
               - college_logo: UCSD-Logo.png
                 college_name: UCSD
-                college_url: https://ucsd.edu
+                college_url: https://www.ucsd.edu
                 college_degree: Machine Learning
                 description: Bachelor of Science
                 visibility: true

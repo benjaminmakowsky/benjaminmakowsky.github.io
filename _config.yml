@@ -47,7 +47,7 @@ author_work_experiences:
               visibility: false
 
 author_education_details:
-              - college_logo: UCSD-Logo.png
+              - college_logo: mit.png
                 college_name: UCSD
                 college_url: https://www.ucsd.edu
                 college_degree: Machine Learning

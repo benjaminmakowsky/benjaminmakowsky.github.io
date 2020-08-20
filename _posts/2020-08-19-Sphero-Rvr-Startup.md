@@ -34,6 +34,19 @@ Explanations for connecting to the Rvr and inital set up can be found on the [Sp
 
 # Let's Begin
 
-## 
+## Creating a Repository to Store Work
+If you haven't already, create a repository on Github called whatever you want so that you can store all your work. 
+
+## Connecting that Repository to Your Pi/RVR
+Now, following the same instructions on the [Sphero Website][connecting] connect to your pi over ssh. If you followed the instructions on the website you should have a directory called: _sphero-sdk-raspberrypi-python_ on your pi, most likely in your home folder where ssh takes you when you first log in. Using the terminal type:
+```
+cd sphero-sdk-raspberrypi-python
+```
+Once you are inside the directory you can download or _clone_ the repository you just created in Github so that everything you make can be saved and stored online. Cloning a repository creates a copy of it on your computer where it will track any changes that you make within that folder. To do so type the following into your terminal replacing _repoName_ with the name of the repo you created on Github.
+```
+git clone repoName
+``` 
+# Commands Used:
+- cd stands for Change Directory and is the command to move around your system from the command line / terminal
 
 [connecting]: https://sdk.sphero.com/docs/getting_started/raspberry_pi/raspberry_pi_setup/#ssh-and-serial-port

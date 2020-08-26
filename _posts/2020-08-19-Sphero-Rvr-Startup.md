@@ -46,7 +46,109 @@ Once you are inside the directory you can download or _clone_ the repository you
 ```
 git clone repoName
 ``` 
-# Commands Used:
-- cd stands for Change Directory and is the command to move around your system from the command line / terminal
+Once you have cloned your repo _cd_ into it so that you can begin working. Next we are going to make a directory inside your project called Python, where you can keep all your python code and scripts. To do this type the follow:
+```
+mkdir Python && cd Python
+```
+Here _mkdir_ makes a directory called mkdir, the _&&_ states you want to do another command, and then you _cd_ into the directory you just made. Once inside your new Python directory you want to create a new file using the _touch_ command as shown:
+```
+touch set_start_up_led_color.py
+```
+This will create a file called _set_start_up_led_color.py_ which we will use, as the name implies, to set the color of the lights on start-up. Copy the code either from either [here][file], or from the sections below.
+
+## Import Statments:
+These import statements allow you to use code from other modules (python files) so that you don't have to write everything yourself.
+```python
+import os
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
+
+import asyncio
+from sphero_sdk import SpheroRvrAsync
+from sphero_sdk import Colors
+from sphero_sdk import RvrLedGroups
+from sphero_sdk import SerialAsyncDal
+```
+__NOTE:__ 
+```
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))) 
+```
+This line tells your program to look 2 directories up for files when importing. If your folder is not in:
+__sphero-sdk-raspberrypi-python/myrepo/Python__ it won't find all the files necessary.
+
+## Initialize Global Variables
+```python
+loop = asyncio.get_event_loop()
+rvr = SpheroRvrAsync(dal=SerialAsyncDal(loop))
+```
+The first line fetches the program loop that will be used later on to repeat until the program exits. The second line creates a rvr ___OBJECT___. An object is exactly like it sounds, it is the code representation of an object that you can modify with code.
+
+## The Main Program
+```python
+async def main():
+    
+    #Wake up the rvr
+    await rvr.wake()
+
+    # Give RVR time to wake up
+    await asyncio.sleep(2)
+
+    # Sets all the colors using RGB style
+    await rvr.set_all_leds(
+        led_group=RvrLedGroups.all_lights.value,
+        # 255, 25, 0 Makes the color orange
+        led_brightness_values=[color for x in range(10) for color in [255 , 25, 0]]
+    )
+
+    # Delay to show LEDs change
+    await asyncio.sleep(1)
+    await rvr.close()
+```
+We will discuss the terms async and await later as they require a whole post by themselves, you just need to know that they allow multiple lines of code to be executed without having to be run in order one after the other.
+
+```python
+if __name__ == '__main__':
+    try:
+        loop.run_until_complete(main())
+
+    except KeyboardInterrupt:
+        print('\nProgram terminated with keyboard interrupt.')
+
+        loop.run_until_complete(rvr.close())
+
+    finally:
+        if loop.is_running():
+            loop.close()
+```
+The above section simply states if this script is the main program loop until all the lights and change and stop if you interupt using a keyboard.
+
+# Running the Program at Start-Up:
+Running your program at start up is the easy part of this process. Because of the way Sphero works you have to load the environment just like this instructions say when setting up for the first time. What we need to do is determine where on our pi this is stored so that we can call it from wherever we want. To do this type the following in the terminal:
+```bash
+ls /home/pi/.local/share/virtualenvs
+```
+This should display some text that looks like:
+```
+sdk-raspberrypi-python-M5SuJw2V
+```
+This is the name of the folder that is storing the environment for your Rvr. Copy this because we will be using it in a second.
+
+In your home folder you have a special file called _.profile_ and this file is ran everytime you log in for the first time. the . at the beginning of the folder name makes it a hidden folder and does not show up normally. This is an important folder so unless you know what you are doing don't change anything in the file that is not mentioned. At the end of the file add the following changing nothing else.
+```bash
+source /home/pi/.local/share/_NAME_OF_FOLDER_YOU_COPIED_HERE_/bin/activate
+python ~/sphero-sdk-raspberrypi-python/Sparki/Python/set_start_up_led_color.py
+exit
+```
+The first line executes the sphero environment so our program can run. The second line runs our program. THe last line exits the sphero environment. 
+
+The next time you restart you Rvr with the pi attached it will change the colors of the LED's to whatever you make it.
+
+# Bash Commands Used:
+- __cd__: stands for Change Directory and is the command to move around your system from the command line / terminal
+- __git clone__: copies a remote repository onto your computer
+- __ls__: Lists the contents of a directory
+- __mkdir__: makes a directory
+- __touch__: creates a file or modifies the last time it was accessed
 
 [connecting]: https://sdk.sphero.com/docs/getting_started/raspberry_pi/raspberry_pi_setup/#ssh-and-serial-port
+[file]: https://github.com/benjaminmakowsky/Sparki/blob/master/Python/set_start_up_led_color.py

@@ -4,7 +4,7 @@ title:  "Getting Rvr to Change Colors on Boot"
 summary: Modifying the .bashrc file to change the colors of the lights at log-in
 author: Benjamin Makowsky
 date: '2020-08-19 15:49:23 +0530'
-category: SPARKI RVR Sphero Linux Scripting Python RaspberryPi
+category: SPARKI 
 thumbnail: /assets/img/posts/code.jpg
 keywords: introduction RVR Sphero Linux Scripting Python
 permalink: /blog/Changing_rvr_color_at_login

@@ -3,7 +3,7 @@ subtitle: A Website for Learning
 description: >- # this means to ignore newlines until "baseurl:"
   devlopr-jekyll is a Jekyll Theme Built For Developers
 
-url: "" # the base hostname & protocol for your site, e.g. https://example.github.io
+url: "https://makestudios.dev" # the base hostname & protocol for your site, e.g. https://example.github.io
 baseurl: "" # the subpath of your site, e.g. /blog
 
 urls:

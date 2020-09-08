@@ -7,8 +7,9 @@ author: Benjamin Makowsky
 tags: [express, cors, mysql, react, node, javascript, typescript]
 summary: In this post we are going to learn how to connect a webserver to a database and enable the ability handle GET requets to send data to another application.
 ---
-# Intro to Full Stack Development
 
+# Intro to Full Stack Development
+[Get the code here][codeLink]
 What is meant by the phrase "Full Stack"? What is a full stack developer? __Full Stack__ simply is the term meaning the entire software development stack from front-end (Web Page / UI) to the back-end (Server). The term full stack developer is a buzz word used by recruiters or companies to mean an individual who is involved in the entire development stack. There is no such thing as a full stack developer vs not because in any position you can be required to work on either side of development and are not limited to simply just front-end or back-end work. Every individual should do their best to learn both front and back end development so that when an issue arises in the pipeline, they can have an idea of where to look and how to fix it. With that, lets begin by creating the back-end server for our front-end client to connect with. 
 
 # The Server
@@ -85,3 +86,5 @@ app.listen(PORT, () => {
 ```
 # Step 3
 And thats it. We have created the server our react app will connect to and are ready to create the server itself.
+
+[codeLink]: https://github.com/benjaminmakowsky/Sparki/blob/master/Node.js/SparkiServer.js

@@ -55,16 +55,11 @@ author_education_details:
                 visibility: true
 
 author_project_details:
-              - project_thumbnail: gamershub.png
+              - project_thumbnail: Sparki.png
                 project_title: S.P.A.R.K.I
                 project_description: An open source robot
                 project_url: https://github.com/benjaminmakowsky/SPARKI-Reborn
                 visibility: true
-              - project_thumbnail: hack4r.PNG
-                project_title: Hack4r
-                project_description: A Platform built for Hackers and Penetration Testers
-                project_url: https://hack4r.com
-                visibility: false
 
 # social links
 twitter_username: makstudios

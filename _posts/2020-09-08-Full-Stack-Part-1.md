@@ -88,4 +88,4 @@ app.listen(PORT, () => {
 # Step 3
 And thats it. We have created the server our react app will connect to and are ready to create the server itself.
 
-[codeLink]: https://github.com/benjaminmakowsky/Sparki/blob/master/Node.js/SparkiServer.js
+[codeLink]: https://github.com/benjaminmakowsky/Youtube/blob/master/simple_server.js

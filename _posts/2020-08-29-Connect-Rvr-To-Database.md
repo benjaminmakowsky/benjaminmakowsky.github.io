@@ -3,6 +3,7 @@ layout: post
 title: Connect RVR to a SQL Database and Web Server
 date: 2020-08-29 15:37
 category: SPARKI
+thumbnail: /assets/img/posts/JavaScript.png
 author: Benjamin Makowsky
 tags: [JavaScript, Python, Rvr, Sparki, MySQL, MariaDB, Raspberry Pi]
 summary: Learn how to connect the RVR to a Database to Display information to a web server.

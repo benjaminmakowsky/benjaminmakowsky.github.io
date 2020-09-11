@@ -5,7 +5,7 @@ summary: An introduction to SPARKI
 author: Benjamin Makowsky
 date: '2020-08-13 15:49:23 +0530'
 category: SPARKI 
-thumbnail: /assets/img/posts/code.jpg
+thumbnail: /assets/img/posts/JavaScript.png
 keywords: introduction
 permalink: /blog/welcome-to-SPARKI
 ---

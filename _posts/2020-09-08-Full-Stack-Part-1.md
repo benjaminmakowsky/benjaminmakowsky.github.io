@@ -4,6 +4,7 @@ title: Full Stack Development (Connecting a Webserver to a Database)
 date: 2020-09-08 13:39
 category: Full Stack
 author: Benjamin Makowsky
+thumbnail: /assets/img/posts/JavaScript.png
 tags: [express, cors, mysql, react, node, javascript, typescript]
 summary: In this post we are going to learn how to connect a webserver to a database and enable the ability handle GET requets to send data to another application.
 ---

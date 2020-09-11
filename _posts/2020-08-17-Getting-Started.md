@@ -5,7 +5,7 @@ summary: SPARKI Set-Up
 author: Benjamin Makowsky
 date: '2020-08-17 14:37:23 +0530'
 category: SPARKI 
-thumbnail: /assets/img/posts/code.jpg
+thumbnail: /assets/img/posts/JavaScript.png
 keywords: Getting-Started
 permalink: /blog/Getting-Started
 ---

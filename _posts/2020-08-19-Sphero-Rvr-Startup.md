@@ -5,7 +5,7 @@ summary: Modifying the .bashrc file to change the colors of the lights at log-in
 author: Benjamin Makowsky
 date: '2020-08-19 15:49:23 +0530'
 category: SPARKI 
-thumbnail: /assets/img/posts/code.jpg
+thumbnail: /assets/img/posts/JavaScript.png
 keywords: introduction RVR Sphero Linux Scripting Python
 permalink: /blog/Changing_rvr_color_at_login
 ---
